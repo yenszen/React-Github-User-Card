@@ -12,7 +12,7 @@ class FollowerList extends React.Component {
 
   componentDidMount() {
     axios
-      .get(`https://api.github.com/users/yenszen/followers`)
+      .get(`https://api.github.com/users/tetondan/followers`)
       .then(res => {
         console.log("CDM follower res: ", res);
         this.setState({
@@ -28,7 +28,11 @@ class FollowerList extends React.Component {
         <h3>Followers</h3>
         {/* <FollowerCard followers={this.state.followers} /> */}
         {this.state.followers.map(follower => {
-          return <FollowerCard follower={follower} />;
+          return (
+            <div key={follower.id}>
+              <FollowerCard follower={follower} />
+            </div>
+          );
         })}
       </div>
     );

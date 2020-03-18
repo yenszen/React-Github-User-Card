@@ -14,7 +14,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get("https://api.github.com/users/yenszen")
+      .get("https://api.github.com/users/tetondan")
       .then(res => {
         console.log("CDM user res: ", res);
         this.setState({

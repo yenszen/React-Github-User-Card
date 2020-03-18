@@ -6,11 +6,11 @@ const UserCard = props => {
       {props.user.map(user => {
         return (
           <div className="card" key={user.id}>
-            <img src={user.avatar_url} />
+            <img src={user.avatar_url} alt="user profile img" />
             <div className="card-info">
               <h3 className="name">{user.login}</h3>
               <p>
-                <a href={`${user.html_url}`} target="_blank">
+                <a href={`${user.html_url}`} target="_blank" rel="noopener noreferrer">
                   GitHub profile
                 </a>
               </p>

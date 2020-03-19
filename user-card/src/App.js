@@ -18,7 +18,7 @@ class App extends React.Component {
       .then(res => {
         console.log("CDM user res: ", res);
         this.setState({
-          user: [...this.state.user, res.data] // res.data is an object, so had to be put into an array to gain access to map function!
+          user: res.data
         });
       })
       .catch(err => console.log(err));
@@ -29,7 +29,6 @@ class App extends React.Component {
       <div className="App">
         <h1>React Github User Card</h1>
         <UserCard user={this.state.user} />
-        {/*  */}
         <FollowerList />
       </div>
     );
